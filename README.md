@@ -9,4 +9,4 @@
 
 ## Asciinema recordings of games: <br>
 
-[asciinema for Greet game]:(https://asciinema.org/a/cHJQopCQTpiDDXpBUNvdMApGd <br>
+[asciinema for 5th step]:(https://asciinema.org/a/cHJQopCQTpiDDXpBUNvdMApGd <br>
