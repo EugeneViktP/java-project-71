@@ -5,8 +5,9 @@
 Удачи!<br>
 
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/EugeneViktP/java-project-71/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/EugeneViktP/java-project-71/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/94ee7492505304b2178d/maintainability)](https://codeclimate.com/github/EugeneViktP/java-project-71/maintainability)
+[![Actions Status](https://github.com/EugeneViktP/java-project-71/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/EugeneViktP/java-project-71/actions)<br>
+[![Maintainability](https://api.codeclimate.com/v1/badges/94ee7492505304b2178d/maintainability)](https://codeclimate.com/github/EugeneViktP/java-project-71/maintainability)<br>
+[![Test Coverage](https://api.codeclimate.com/v1/badges/94ee7492505304b2178d/test_coverage)](https://codeclimate.com/github/EugeneViktP/java-project-71/test_coverage)
 
 ## Asciinema recordings of games: <br>
 

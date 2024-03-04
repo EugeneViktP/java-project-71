@@ -3,6 +3,7 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
     application
+    jacoco
     id("java")
     id("checkstyle")
 }
@@ -37,3 +38,5 @@ tasks.test {
         showStandardStreams = true
     }
 }
+
+tasks.jacocoTestReport {reports {xml.required.set(true)}}
