@@ -46,7 +46,7 @@ public class ClassComparator {
                         .append(key)
                         .append(": ")
                         .append(data2.get(key))
-                        .append("\n");;
+                        .append("\n");
 
             }
         }
