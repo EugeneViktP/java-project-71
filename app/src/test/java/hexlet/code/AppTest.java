@@ -46,8 +46,18 @@ class AppTest {
         System.out.println(expRes);
         assertEquals(result1, expRes);
 
-//        String result2 = App.getForwardedVariables(data2);
-//        String expected2 = "var1=111,var2=123,var3=value,mail=tirion@google.com,HOME=/home/tirion";
-//        assertThat(result2).isEqualTo(expected2);
+    }
+
+    @Test
+    void testDifferGenerate2() throws Exception {
+        Path data1 = AppTest.getPath("file1.yml");
+        Path data2 = AppTest.getPath("file2.yml");
+        String result1 = Differ.generate(data1, data2);
+        System.out.println(result1);
+        Path expected1 = AppTest.getPath("ymlCompRes.txt");
+        String expRes = Files.readString(expected1);
+        System.out.println(expRes);
+        assertEquals(result1, expRes);
+
     }
 }

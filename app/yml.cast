@@ -1,0 +1,11 @@
+{"version": 2, "width": 137, "height": 10, "timestamp": 1709915670, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
+[0.01034, "o", "\u001b[?2004h\u001b]0;eugene@eugene-CREF-XX: ~/java-project-71/app\u0007\u001b[01;32meugene@eugene-CREF-XX\u001b[00m:\u001b[01;34m~/java-project-71/app\u001b[00m$ "]
+[1.050811, "o", "\u001b[7m./build/install/app/bin/app file1.json file2.json\u001b[27m"]
+[2.01244, "o", "\r\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C./build/install/app/bin/app file1.json file2.json\r\n\u001b[?2004l\r"]
+[2.310037, "o", "{\r\n- follow: false\r\n  host: hexlet.io\r\n- proxy: 123.234.53.22\r\n- timeout: 50\r\n+ timeout: 20\r\n+ verbose: true\r\n}\r\n"]
+[2.329512, "o", "\u001b[?2004h\u001b]0;eugene@eugene-CREF-XX: ~/java-project-71/app\u0007\u001b[01;32meugene@eugene-CREF-XX\u001b[00m:\u001b[01;34m~/java-project-71/app\u001b[00m$ "]
+[8.940397, "o", "\u001b[7m./build/install/app/bin/app file1.yml file2.yml\u001b[27m"]
+[9.917584, "o", "\r\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C./build/install/app/bin/app file1.yml file2.yml\r\n\u001b[?2004l\r"]
+[10.225504, "o", "{\r\n- follow: false\r\n  host: hexlet.io\r\n+ newKey: checkThis\r\n- newkey: checkThat\r\n- proxy: 123.234.53.22\r\n- timeout: 50\r\n+ timeout: 20\r\n+ verbose: true\r\n}\r\n"]
+[10.243394, "o", "\u001b[?2004h\u001b]0;eugene@eugene-CREF-XX: ~/java-project-71/app\u0007\u001b[01;32meugene@eugene-CREF-XX\u001b[00m:\u001b[01;34m~/java-project-71/app\u001b[00m$ "]
+[11.795408, "o", "\u001b[?2004l\r\r\nexit\r\n"]
