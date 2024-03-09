@@ -37,27 +37,21 @@ class AppTest {
 
     @Test
     void testDifferGenerate() throws Exception {
-        Path data1 = AppTest.getPath("file1.json");
-        Path data2 = AppTest.getPath("file2.json");
-        String result1 = Differ.generate(data1, data2);
+        String result1 = Differ.generate("file1.json", "file2.json");
         System.out.println(result1);
         Path expected1 = AppTest.getPath("jsonCompRes.txt");
         String expRes = Files.readString(expected1);
         System.out.println(expRes);
         assertEquals(result1, expRes);
-
     }
 
     @Test
     void testDifferGenerate2() throws Exception {
-        Path data1 = AppTest.getPath("file1.yml");
-        Path data2 = AppTest.getPath("file2.yml");
-        String result1 = Differ.generate(data1, data2);
+        String result1 = Differ.generate("file1.yml", "file2.yml");
         System.out.println(result1);
         Path expected1 = AppTest.getPath("ymlCompRes.txt");
         String expRes = Files.readString(expected1);
         System.out.println(expRes);
         assertEquals(result1, expRes);
-
     }
 }
