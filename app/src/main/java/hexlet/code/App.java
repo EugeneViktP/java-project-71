@@ -1,7 +1,6 @@
 package hexlet.code;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
-//import picocli.CommandLine;
 import picocli.CommandLine.Option;
 //import picocli.CommandLine.Parameters;
 
@@ -15,16 +14,20 @@ public class App implements Callable<Integer> {
     private String filepath1;
     @CommandLine.Parameters(index = "1", paramLabel = "filepath2", description = "path to second file")
     private String filepath2;
-    @Option(names = {"-f", "--format"}, paramLabel = "format", description = "output format [default: stylish]")
+    @Option(names = {"-f", "--format"}, paramLabel = "format", defaultValue = "stylish",
+            description = "output format [default: what is it ${DEFAULT-VALUE}]")
     private String format;
 
 
     public static void main(String[] args) {
+
         new CommandLine(new App()).execute(args);
     }
 
     @Override
     public Integer call() throws Exception {
+//        default filepath
+//        ./build/install/app/bin/app file3.yml file4.yml
         var differ = Differ.generate(filepath1, filepath2);
         System.out.println(differ);
         return 0;

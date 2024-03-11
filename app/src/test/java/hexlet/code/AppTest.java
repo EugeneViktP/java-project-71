@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 //import static org.assertj.core.api.Assertions.assertThat;
+//import static hexlet.code.Differ.diffBuilder;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AppTest {
@@ -36,22 +37,26 @@ class AppTest {
 //    }
 
     @Test
-    void testDifferGenerate() throws Exception {
+    void testDifferGenerate1() throws Exception {
         String result1 = Differ.generate("file1.json", "file2.json");
-        System.out.println(result1);
         Path expected1 = AppTest.getPath("jsonCompRes.txt");
-        String expRes = Files.readString(expected1);
-        System.out.println(expRes);
-        assertEquals(result1, expRes);
+        String expectedResults = Files.readString(expected1);
+        assertEquals(result1, expectedResults);
     }
 
     @Test
     void testDifferGenerate2() throws Exception {
         String result1 = Differ.generate("file1.yml", "file2.yml");
-        System.out.println(result1);
         Path expected1 = AppTest.getPath("ymlCompRes.txt");
-        String expRes = Files.readString(expected1);
-        System.out.println(expRes);
-        assertEquals(result1, expRes);
+        String expectedResults = Files.readString(expected1);
+        assertEquals(result1, expectedResults);
+    }
+
+    @Test
+    void testDifferGenerate3() throws Exception {
+        String result1 = Differ.generate("file3.yml", "file4.yml");
+        Path expected1 = AppTest.getPath("nestedYml.txt");
+        String expectedResults = Files.readString(expected1);
+        assertEquals(result1, expectedResults);
     }
 }
