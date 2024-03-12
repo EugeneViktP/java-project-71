@@ -13,4 +13,4 @@
 
 [asciinema for 5th step]:(https://asciinema.org/a/cHJQopCQTpiDDXpBUNvdMApGd) <br>
 [asciinema for 7th step]:(https://asciinema.org/a/t3dohAsWXCYG7Vc4tNBLQWnKw) <br>
-https://asciinema.org/a/t3dohAsWXCYG7Vc4tNBLQWnKw
+[asciinema for 8th step]:(https://asciinema.org/a/7xbznyN1spX30TCZX1Pb6yrnl) <br>

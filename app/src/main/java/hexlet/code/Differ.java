@@ -8,11 +8,22 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Differ {
-    public static String generate(String filepath1, String filepath2) throws Exception {
+    public static String generate(String filepath1, String filepath2, String format) throws Exception {
         Map<String, Object> buffer1 = Parser.parse(filepath1);
         Map<String, Object> buffer2 = Parser.parse(filepath2);
-        return Stylish.formatter(diffBuilder(buffer1, buffer2));
+        switch (format) {
+            case "stylish" -> {
+                return Stylish.formatter(diffBuilder(buffer1, buffer2));
+            }
+            case "plain" -> {
+                return diffBuilder(buffer1, buffer2).toString();
+            }
+            default -> {
+                return "Option -f format is Wrong";
+            }
+        }
     }
+
 
     // DiffBuilder
     public static Map<String, StatusValuesDB> diffBuilder(Map<String, Object> data1, Map<String, Object> data2) {
