@@ -28,6 +28,7 @@ public class App implements Callable<Integer> {
     public Integer call() throws Exception {
 //        default filepath
 //        ./build/install/app/bin/app file3.yml file4.yml
+//        ./build/install/app/bin/app -f plain file3.yml file4.yml
         var differ = Differ.generate(filepath1, filepath2, format);
         System.out.println(differ);
         return 0;

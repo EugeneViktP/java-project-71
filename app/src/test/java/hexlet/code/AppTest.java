@@ -39,7 +39,7 @@ class AppTest {
     @Test
     void testDifferGenerate1() throws Exception {
         String result1 = Differ.generate("file1.json", "file2.json", "stylish");
-        Path expected1 = AppTest.getPath("jsonCompRes.txt");
+        Path expected1 = AppTest.getPath("jsonStylish.txt");
         String expectedResults = Files.readString(expected1);
         assertEquals(result1, expectedResults);
     }
@@ -47,7 +47,7 @@ class AppTest {
     @Test
     void testDifferGenerate2() throws Exception {
         String result1 = Differ.generate("file1.yml", "file2.yml", "stylish");
-        Path expected1 = AppTest.getPath("ymlCompRes.txt");
+        Path expected1 = AppTest.getPath("ymlStylish.txt");
         String expectedResults = Files.readString(expected1);
         assertEquals(result1, expectedResults);
     }
@@ -55,7 +55,15 @@ class AppTest {
     @Test
     void testDifferGenerate3() throws Exception {
         String result1 = Differ.generate("file3.yml", "file4.yml", "stylish");
-        Path expected1 = AppTest.getPath("nestedYml.txt");
+        Path expected1 = AppTest.getPath("ymlNestedStylish.txt");
+        String expectedResults = Files.readString(expected1);
+        assertEquals(result1, expectedResults);
+    }
+
+    @Test
+    void testDifferGenerate4() throws Exception {
+        String result1 = Differ.generate("file3.yml", "file4.yml", "plain");
+        Path expected1 = AppTest.getPath("ymlNestePlain.txt");
         String expectedResults = Files.readString(expected1);
         assertEquals(result1, expectedResults);
     }

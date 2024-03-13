@@ -1,5 +1,7 @@
 {
   "timeout": 20,
+  "newkey": 30,
+  "some": 50,
   "verbose": true,
   "host": "hexlet.io"
 }

@@ -27,6 +27,7 @@ public class Differ {
                 result.put(key, new StatusValuesDB("added", data2.get(key)));
             } else if (!data2.containsKey(key)) {
                 result.put(key, new StatusValuesDB("deleted", data1.get(key)));
+//                result.put(key, new StatusValuesDB("deleted", data2.get(key)));
             } else if (data1.get(key).equals(data2.get(key))) {
                 result.put(key, new StatusValuesDB("unchanged", data1.get(key)));
             } else {
