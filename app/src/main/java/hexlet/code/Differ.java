@@ -16,6 +16,12 @@ public class Differ {
         return Formatter.format(data, format);
     }
 
+    public static String generate(String filepath1, String filepath2) throws Exception {
+        Map<String, Object> buffer1 = Parser.parse(filepath1);
+        Map<String, Object> buffer2 = Parser.parse(filepath2);
+        var data = diffBuilder(buffer1, buffer2);
+        return Formatter.format(data, "stylish");
+    }
     // DiffBuilder
     public static Map<String, StatusValuesDB> diffBuilder(Map<String, Object> data1, Map<String, Object> data2) {
         Map<String, StatusValuesDB> result = new LinkedHashMap<>();
