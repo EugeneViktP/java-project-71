@@ -1,4 +1,3 @@
-newKey: checkThis
-timeout: 20
-verbose: true
-host: hexlet.io
+setting1: Another value
+setting2: 300
+setting3: none
