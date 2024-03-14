@@ -14,6 +14,7 @@ public class Parser {
         } else if (Utils.getFileExtension(filepath).equals("json")) {
             objectMapper = new ObjectMapper();
         }
+        assert objectMapper != null;
         return objectMapper.readValue(Utils.createInToParse(filepath), new TypeReference<Map<String, Object>>() {
         });
     }

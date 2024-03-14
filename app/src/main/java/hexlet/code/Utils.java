@@ -1,7 +1,9 @@
 package hexlet.code;
 //import java.nio.file.Files;
 
-import java.io.File;
+//import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -22,9 +24,8 @@ public class Utils {
         return fileExtension;
     }
 
-    public static File createInToParse(String filepath) {
+    public static String createInToParse(String filepath) throws IOException {
         Path pathOne = Utils.getPath(filepath);
-        File fileIn = new File(String.valueOf(pathOne));
-        return fileIn;
+        return Files.readString(pathOne);
     }
 }
