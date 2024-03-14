@@ -11,9 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AppTest {
 
-//    private static Path data1;
-//    private static Path data2;
-
     private static Path getPath(String fileName) {
         return Paths.get("src", "test", "resources", fileName)
                 .toAbsolutePath().normalize();
@@ -67,4 +64,14 @@ class AppTest {
         String expectedResults = Files.readString(expected1);
         assertEquals(result1, expectedResults);
     }
+
+    @Test
+    void testDifferGenerate5() throws Exception {
+        String result1 = Differ.generate("file1.json", "file2.json", "json");
+        Path expected1 = AppTest.getPath("formatJson.txt");
+        String expectedResults = Files.readString(expected1);
+        assertEquals(result1, expectedResults);
+    }
+
+
 }

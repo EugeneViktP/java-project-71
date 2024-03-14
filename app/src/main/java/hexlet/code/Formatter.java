@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.formatters.Json;
 import hexlet.code.formatters.Plain;
 import hexlet.code.formatters.Stylish;
 
@@ -13,6 +14,9 @@ public class Formatter {
             }
             case "plain" -> {
                 return Plain.formatter(data);
+            }
+            case "json" -> {
+                return Json.formatter(data);
             }
             default -> {
                 return "Option -f format is Wrong";

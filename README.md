@@ -15,3 +15,4 @@
 [asciinema for 7th step]:(https://asciinema.org/a/t3dohAsWXCYG7Vc4tNBLQWnKw) <br>
 [asciinema for 8th step]:(https://asciinema.org/a/7xbznyN1spX30TCZX1Pb6yrnl) <br>
 [asciinema for 9th step]:(https://asciinema.org/a/KPnC0Tf2MJV5XRgJHgdrLTPDf) <br>
+[asciinema for 10th step]:(https://asciinema.org/a/yifGch6zvILTkMAUTLQ9VM1XV) <br>
