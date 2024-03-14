@@ -1,0 +1,6 @@
+Property 'follow' was removed
+Property 'newkey' was added with value: 30
+Property 'proxy' was removed
+Property 'some' was added with value: 50
+Property 'timeout' was updated. From 50 to 20
+Property 'verbose' was added with value: true

@@ -29,7 +29,15 @@ public class DifferTest {
         String expectedResults = Files.readString(expected1);
         assertEquals(result1, expectedResults);
     }
+    @Test
     void testDifferGenerate3() throws Exception {
+        String result1 = Differ.generate("file1.json", "file2.json", "plain");
+        Path expected1 = DifferTest.getPath("jsonPlain.txt");
+        String expectedResults = Files.readString(expected1);
+        assertEquals(result1, expectedResults);
+    }
+    @Test
+    void testDifferGenerate4() throws Exception {
         String result1 = Differ.generate("file1.yml", "file2.yml", "stylish");
         Path expected1 = DifferTest.getPath("ymlStylish.txt");
         String expectedResults = Files.readString(expected1);
