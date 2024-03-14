@@ -8,13 +8,14 @@ import java.util.Map;
 
 public class Parser {
     public static Map<String, Object> parse(String filepath) throws Exception {
-        ObjectMapper objectMapper = null;
+        ObjectMapper objectMapper;
         if (Utils.getFileExtension(filepath).equals("yml")) {
             objectMapper = new YAMLMapper();
         } else if (Utils.getFileExtension(filepath).equals("json")) {
             objectMapper = new ObjectMapper();
+        } else {
+            throw new Exception("Null pointer");
         }
-        assert objectMapper != null;
         return objectMapper.readValue(Utils.createInToParse(filepath), new TypeReference<Map<String, Object>>() {
         });
     }
