@@ -12,30 +12,30 @@ public class Stylish {
         for (String key : data.keySet()) {
             switch (data.get(key).getKey()) {
                 case "added" -> //added
-                        result.append("+ ")
+                        result.append("  + ")
                                 .append(key)
                                 .append(": ")
                                 .append(data.get(key).getValue1())
                                 .append("\n");
                 case "deleted" -> //deleted
-                        result.append("- ")
+                        result.append("  - ")
                                 .append(key)
                                 .append(": ")
                                 .append(data.get(key).getValue1())
                                 .append("\n");
                 case "unchanged" -> //unchanged
-                        result.append("  ")
+                        result.append("    ")
                                 .append(key)
                                 .append(": ")
                                 .append(data.get(key).getValue1())
                                 .append("\n");
                 case "changed" -> //changed
-                        result.append("- ")
+                        result.append("  - ")
                                 .append(key)
                                 .append(": ")
                                 .append(data.get(key).getValue1())
                                 .append("\n")
-                                .append("+ ")
+                                .append("  + ")
                                 .append(key)
                                 .append(": ")
                                 .append(data.get(key).getValue2())
