@@ -14,14 +14,22 @@ public class DifferTest {
         return Paths.get("src", "test", "resources", "fixtures", fileName)
                 .toAbsolutePath().normalize();
     }
+
     @Test
     void testDifferGenerate1() throws Exception {
+        String result1 = Differ.generate("file1.json", "file2.json");
+        Path expected1 = DifferTest.getPath("jsonStylish.txt");
+        String expectedResults = Files.readString(expected1);
+        assertEquals(result1, expectedResults);
+    }
+    @Test
+    void testDifferGenerate2() throws Exception {
         String result1 = Differ.generate("file1.json", "file2.json", "stylish");
         Path expected1 = DifferTest.getPath("jsonStylish.txt");
         String expectedResults = Files.readString(expected1);
         assertEquals(result1, expectedResults);
     }
-    void testDifferGenerate2() throws Exception {
+    void testDifferGenerate3() throws Exception {
         String result1 = Differ.generate("file1.yml", "file2.yml", "stylish");
         Path expected1 = DifferTest.getPath("ymlStylish.txt");
         String expectedResults = Files.readString(expected1);
