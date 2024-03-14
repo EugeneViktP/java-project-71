@@ -9,7 +9,7 @@ public class Utils {
 
     public static Path getPath(String fileName) {
 //        return Paths.get("src", "", "resources", fileName)
-        return Paths.get("src", "test", "resources", fileName)
+        return Paths.get("src", "test", "resources", "fixtures", fileName)
                 .toAbsolutePath().normalize();
     }
 

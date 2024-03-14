@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DifferTest {
 
     private static Path getPath(String fileName) {
-        return Paths.get("src", "test", "resources", fileName)
+        return Paths.get("src", "test", "resources", "fixtures", fileName)
                 .toAbsolutePath().normalize();
     }
     @Test
