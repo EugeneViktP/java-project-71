@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 public class Utils {
 
     public static Path getPath(String fileName) {
-        return Paths.get("src", "test", "resources", "fixtures", fileName)
-//        return Paths.get(fileName)
+//        return Paths.get("src", "test", "resources", "fixtures", fileName)
+        return Paths.get(fileName)
                 .toAbsolutePath().normalize();
     }
 

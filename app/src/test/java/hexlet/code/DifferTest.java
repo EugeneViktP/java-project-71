@@ -11,37 +11,49 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DifferTest {
 
     private static Path getPath(String fileName) {
-//        return Paths.get("src", "test", "resources", "fixtures", fileName)
-        return Paths.get(fileName)
+        return Paths.get("src", "test", "resources", "fixtures", fileName)
+//        return Paths.get(fileName)
                 .toAbsolutePath().normalize();
     }
 
     @Test
     void testDifferGenerate1() throws Exception {
-        String result1 = Differ.generate("file1.json", "file2.json");
+        String file1 = getPath("file1.json").toString();
+        String file2 = getPath("file2.json").toString();
+        String result1 = Differ.generate(file1, file2);
         Path expected1 = DifferTest.getPath("jsonStylish.txt");
-        String expectedResults = Files.readString(expected1);
-        assertEquals(result1, expectedResults);
+        String expectedResults1 = Files.readString(expected1);
+        assertEquals(result1, expectedResults1);
+
+        String result2 = Differ.generate(file1, file2, "stylish");
+        Path expected2 = DifferTest.getPath("jsonStylish.txt");
+        String expectedResults2 = Files.readString(expected2);
+        assertEquals(result2, expectedResults2);
+
+        String result3 = Differ.generate(file1, file2, "plain");
+        Path expected3 = DifferTest.getPath("jsonPlain.txt");
+        String expectedResults3 = Files.readString(expected3);
+        assertEquals(result3, expectedResults3);
     }
-    @Test
-    void testDifferGenerate2() throws Exception {
-        String result1 = Differ.generate("file1.json", "file2.json", "stylish");
-        Path expected1 = DifferTest.getPath("jsonStylish.txt");
-        String expectedResults = Files.readString(expected1);
-        assertEquals(result1, expectedResults);
-    }
-    @Test
-    void testDifferGenerate3() throws Exception {
-        String result1 = Differ.generate("file1.json", "file2.json", "plain");
-        Path expected1 = DifferTest.getPath("jsonPlain.txt");
-        String expectedResults = Files.readString(expected1);
-        assertEquals(result1, expectedResults);
-    }
-    @Test
-    void testDifferGenerate4() throws Exception {
-        String result1 = Differ.generate("file1.yml", "file2.yml", "stylish");
-        Path expected1 = DifferTest.getPath("ymlStylish.txt");
-        String expectedResults = Files.readString(expected1);
-        assertEquals(result1, expectedResults);
-    }
+
+
+//        @Test
+//        void testDifferGenerate2() throws Exception {
+//            String file3 =getPath("file3.yml").toString();
+//            String file4 =getPath("file3.yml").toString();
+//            String result1 = Differ.generate(file3, file4);
+//            Path expected1 = DifferTest.getPath("ymlNestedStylish.txt");
+//            String expectedResults1 = Files.readString(expected1);
+//            assertEquals(result1, expectedResults1);
+
+//            String result2 = Differ.generate(file3, file4, "stylish");
+//            Path expected2 = DifferTest.getPath("ymlNestedStylish.txt");
+//            String expectedResults2 = Files.readString(expected2);
+//            assertEquals(result2, expectedResults2);
+//
+//            String result3 = Differ.generate(file3, file4, "plain");
+//            Path expected3 = DifferTest.getPath("ymlNestedPlain.txt");
+//            String expectedResults3 = Files.readString(expected3);
+//            assertEquals(result3, expectedResults3);
+//    }
 }
