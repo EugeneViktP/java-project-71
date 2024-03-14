@@ -38,9 +38,12 @@ public class Plain {
     }
 
     public static String checkComplexity(Object obj) {
+        if (obj == null) {
+            return "null";
+        }
         if (obj instanceof Map || obj instanceof List) {
             return "[complex value]";
-        } else if (obj instanceof String) {
+        } else if (obj instanceof String && obj != null) {
             return "'" + obj.toString() + "'";
         }
         return obj.toString();
