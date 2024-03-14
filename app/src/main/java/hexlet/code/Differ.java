@@ -7,6 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.Objects;
 
 public class Differ {
     public static String generate(String filepath1, String filepath2, String format) throws Exception {
@@ -34,7 +35,7 @@ public class Differ {
             } else if (!data2.containsKey(key)) {
                 result.put(key, new StatusValuesDB("deleted", data1.get(key)));
 //                result.put(key, new StatusValuesDB("deleted", data2.get(key)));
-            } else if (data1.get(key).equals(data2.get(key))) {
+            } else if (Objects.equals(data1.get(key), data2.get(key))) {
                 result.put(key, new StatusValuesDB("unchanged", data1.get(key)));
             } else {
                 result.put(key, new StatusValuesDB("changed", data1.get(key), data2.get(key)));
