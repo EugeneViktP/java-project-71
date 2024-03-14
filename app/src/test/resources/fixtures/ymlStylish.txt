@@ -1,18 +1,18 @@
 {
-- checked: false
-- default: null
-- id: 45
-+ id: null
-- key1: value1
-+ key2: value2
-  numbers1: [1, 2, 3, 4]
-- numbers2: [2, 3, 4, 5]
-+ numbers2: [22, 33, 44, 55]
-+ numbers3: some
-- setting1: Some value
-+ setting1: Another value
-- setting2: 200
-+ setting2: 300
-- setting3: true
-+ setting3: none
+  - checked: false
+  - default: null
+  - id: 45
+  + id: null
+  - key1: value1
+  + key2: value2
+    numbers1: [1, 2, 3, 4]
+  - numbers2: [2, 3, 4, 5]
+  + numbers2: [22, 33, 44, 55]
+  + numbers3: some
+  - setting1: Some value
+  + setting1: Another value
+  - setting2: 200
+  + setting2: 300
+  - setting3: true
+  + setting3: none
 }
