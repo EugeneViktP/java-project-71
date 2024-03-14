@@ -1,6 +1,6 @@
 package hexlet.code;
 
-public class StatusValuesDB {
+public final class StatusValuesDB {
     private String key;
     private Object value1;
     private Object value2;
