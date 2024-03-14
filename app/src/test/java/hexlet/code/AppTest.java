@@ -12,7 +12,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class AppTest {
 
     private static Path getPath(String fileName) {
-        return Paths.get("src", "test", "resources", "fixtures", fileName)
+//        return Paths.get("src", "test", "resources", "fixtures", fileName)
+        return Paths.get(fileName)
                 .toAbsolutePath().normalize();
     }
 
