@@ -12,7 +12,6 @@ public class DifferTest {
 
     private static Path getPath(String fileName) {
         return Paths.get("src", "test", "resources", "fixtures", fileName)
-//        return Paths.get(fileName)
                 .toAbsolutePath().normalize();
     }
 
@@ -55,7 +54,7 @@ public class DifferTest {
         Path expected2 = DifferTest.getPath("ymlNestedStylish.txt");
         String expectedResults2 = Files.readString(expected2);
         assertEquals(result2, expectedResults2);
-//
+
         String result3 = Differ.generate(file3, file4, "plain");
         Path expected3 = DifferTest.getPath("ymlNestedPlain.txt");
         String expectedResults3 = Files.readString(expected3);
