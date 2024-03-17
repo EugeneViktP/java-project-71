@@ -6,7 +6,6 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.Objects;
 
-
 public class DiffBuilder {
     public static Map<String, StatusValuesDB> compareData(Map<String, Object> data1, Map<String, Object> data2) {
         Map<String, StatusValuesDB> result = new LinkedHashMap<>();
