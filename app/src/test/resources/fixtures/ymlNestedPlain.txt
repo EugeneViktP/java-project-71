@@ -1,5 +1,0 @@
-Property 'default' was updated. From [complex value] to [complex value]
-Property 'numbers1' was updated. From [complex value] to [complex value]
-Property 'obj2' was added with value: [complex value]
-Property 'setting1' was updated. From 'Some values' to 'Another values'
-Property 'setting2' was removed

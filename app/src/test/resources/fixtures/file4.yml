@@ -1,5 +1,0 @@
-setting1: Another values
-numbers1: [1, 2, 3, 4, 5]
-default: ["value1"]
-obj1: {nestedKey: value, isNested: true}
-obj2: ['Poppy', 'Crude']
