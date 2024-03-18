@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 
 public class Formatter {
-//    public static String format(Map<String, StatusValuesDB> data, String format) {
     public static String format(List<Map<String, Object>> data, String format) {
         switch (format) {
             case "stylish" -> {
