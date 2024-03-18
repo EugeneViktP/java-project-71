@@ -4,7 +4,6 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
-//import java.nio.file.Path;
 import java.util.concurrent.Callable;
 
 @Command(name = "gendiff", mixinStandardHelpOptions = true,
@@ -26,10 +25,6 @@ public final class App implements Callable<Integer> {
 
     @Override
     public Integer call() throws Exception {
-//        default filepath
-//        ./build/install/app/bin/app file3.yml file4.yml
-//        ./build/install/app/bin/app -f plain file3.yml file4.yml
-//        ./build/install/app/bin/app -f json file3.yml file4.yml
         var differ = Differ.generate(filepath1, filepath2, format);
         System.out.println(differ);
         return 0;

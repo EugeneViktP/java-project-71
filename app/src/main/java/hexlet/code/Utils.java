@@ -1,7 +1,5 @@
 package hexlet.code;
-//import java.nio.file.Files;
 
-//import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,7 +8,7 @@ import java.nio.file.Paths;
 public class Utils {
 
     public static Path getPath(String fileName) {
-//        return Paths.get("src", "test", "resources", "fixtures", fileName)
+//        default Path for test's sources ("src", "test", "resources", "fixtures", fileName)
         return Paths.get(fileName)
                 .toAbsolutePath().normalize();
     }
