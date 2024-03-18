@@ -13,7 +13,6 @@ import java.util.ArrayList;
 public class DiffBuilder {
     static List<Map<String, Object>> createData(Map<String, Object> data1, Map<String, Object> data2) {
         List<Map<String, Object>> result = new ArrayList<>();
-
         Set<String> union = new TreeSet<>();
         union.addAll(data1.keySet());
         union.addAll(data2.keySet());
