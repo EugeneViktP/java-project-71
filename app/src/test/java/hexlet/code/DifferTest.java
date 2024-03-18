@@ -34,10 +34,11 @@ public class DifferTest {
         String expectedResults3 = Files.readString(expected3);
         assertEquals(expectedResults3, result3);
 
-//        String result4 = Differ.generate(file1, file2, "json");
-//        Path expected4 = DifferTest.getPath("resultJson.txt");
-//        String expectedResults4 = Files.readString(expected4);
-//        assertEquals(expectedResults4, result4);
+        String result4 = Differ.generate(file1, file2, "json");
+        Path expected4 = DifferTest.getPath("resultJson.txt");
+        String expectedResults4 = Files.readString(expected4);
+        assertEquals(expectedResults4, result4);
+
     }
 
     @Test
@@ -59,9 +60,9 @@ public class DifferTest {
         String expectedResults3 = Files.readString(expected3);
         assertEquals(result3, expectedResults3);
 
-//        String result4 = Differ.generate(file3, file4, "json");
-//        Path expected4 = DifferTest.getPath("resultJson.txt");
-//        String expectedResults4 = Files.readString(expected4);
-//        assertEquals(result4, expectedResults4);
+        String result4 = Differ.generate(file3, file4, "json");
+        Path expected4 = DifferTest.getPath("resultJson.txt");
+        String expectedResults4 = Files.readString(expected4);
+        assertEquals(result4, expectedResults4);
     }
 }
