@@ -43,7 +43,7 @@ public class Plain {
         if (obj instanceof Map || obj instanceof List) {
             return "[complex value]";
         } else if (obj instanceof String) {
-            return "'" + obj.toString() + "'";
+            return "'" + obj + "'";
         }
         return obj.toString();
     }
