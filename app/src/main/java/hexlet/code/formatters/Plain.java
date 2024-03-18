@@ -9,20 +9,20 @@ public class Plain {
         StringBuilder result = new StringBuilder();
         for (var unit : data) {
             switch (unit.get("status").toString()) {
-                case "added" -> //added
+                case "added" ->
                         result.append("Property '")
                                 .append(unit.get("key"))
                                 .append("' was added with value: ")
                                 .append(checkComplexity(unit.get("secondFileValue")))
                                 .append("\n");
-                case "deleted" -> //deleted
+                case "deleted" ->
                         result.append("Property '")
                                 .append(unit.get("key"))
                                 .append("' was removed")
                                 .append("\n");
-                case "unchanged" -> //unchanged
+                case "unchanged" ->
                         result.append("");
-                case "changed" -> //changed
+                case "changed" ->
                         result.append("Property '")
                                 .append(unit.get("key"))
                                 .append("' was updated. From ")
@@ -42,7 +42,7 @@ public class Plain {
         }
         if (obj instanceof Map || obj instanceof List) {
             return "[complex value]";
-        } else if (obj instanceof String && obj != null) {
+        } else if (obj instanceof String) {
             return "'" + obj.toString() + "'";
         }
         return obj.toString();
