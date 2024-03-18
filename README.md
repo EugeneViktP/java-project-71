@@ -9,7 +9,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/94ee7492505304b2178d/maintainability)](https://codeclimate.com/github/EugeneViktP/java-project-71/maintainability)<br>
 [![Test Coverage](https://api.codeclimate.com/v1/badges/94ee7492505304b2178d/test_coverage)](https://codeclimate.com/github/EugeneViktP/java-project-71/test_coverage)
 
-## Asciinema recordings of games: <br>
+## Asciinema recordings of different variants of program actuation : <br>
 
 [asciinema for 5th step]:(https://asciinema.org/a/cHJQopCQTpiDDXpBUNvdMApGd) <br>
 [asciinema for 7th step]:(https://asciinema.org/a/t3dohAsWXCYG7Vc4tNBLQWnKw) <br>
@@ -23,4 +23,4 @@
 1. Клонировать проект с Гитхаба на свой компьютер <br>
 2. Открыть проект в Intellij Idea <br>
 3. Запустить задачу Gradle installDist <br>
-4. После этого в консоли в директории app с помощью команды make run-dist запустить игру <br>
+4. После этого в консоли в директории app с помощью команды make run-dist запустить программу <br>
