@@ -10,8 +10,11 @@ public class Differ {
         String secondFileExtension = Utils.getFileExtension(filepath2);
         Map<String, Object> buffer1 = Parser.parse(textOne, firstFileExtension);
         Map<String, Object> buffer2 = Parser.parse(textTwo, secondFileExtension);
-        var data = DiffBuilder.compareData(buffer1, buffer2);
-        return Formatter.format(data, format);
+//        var data = DiffBuilder.compareData(buffer1, buffer2);
+        var secondData = DiffBuilder.createData(buffer1, buffer2);
+//        new method to make comparison
+//        System.out.println(Plain.formatter2(secondData));
+        return Formatter.format(secondData, format);
     }
 
     public static String generate(String filepath1, String filepath2) throws Exception {
@@ -21,7 +24,9 @@ public class Differ {
         String secondFileExtension = Utils.getFileExtension(filepath2);
         Map<String, Object> buffer1 = Parser.parse(textOne, firstFileExtension);
         Map<String, Object> buffer2 = Parser.parse(textTwo, secondFileExtension);
-        var data = DiffBuilder.compareData(buffer1, buffer2);
+//        var data = DiffBuilder.compareData(buffer1, buffer2);
+        var data = DiffBuilder.createData(buffer1, buffer2);
+
         return Formatter.format(data, "stylish");
     }
 }
