@@ -61,7 +61,7 @@ public class DiffBuilder {
             }
             result.add(unit);
         }
-        System.out.println(result);
+//        System.out.println(result);
         return result;
     }
 }
