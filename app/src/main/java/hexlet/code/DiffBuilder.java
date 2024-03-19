@@ -17,20 +17,21 @@ public class DiffBuilder {
         union.addAll(data2.keySet());
         for (String key : union) {
             Map<String, Object> unit = new LinkedHashMap<>();
+            unit.put("key", key);
             if (!data1.containsKey(key)) {
-                unit.put("key", key);
+//                unit.put("key", key);
                 unit.put("status", "added");
                 unit.put("secondFileValue", data2.get(key));
             } else if (!data2.containsKey(key)) {
-                unit.put("key", key);
+//                unit.put("key", key);
                 unit.put("status", "deleted");
                 unit.put("firstFileValue", data1.get(key));
             } else if (Objects.equals(data1.get(key), data2.get(key))) {
-                unit.put("key", key);
+//                unit.put("key", key);
                 unit.put("status", "unchanged");
                 unit.put("firstFileValue", data1.get(key));
             } else {
-                unit.put("key", key);
+//                unit.put("key", key);
                 unit.put("status", "changed");
                 unit.put("firstFileValue", data1.get(key));
                 unit.put("secondFileValue", data2.get(key));
