@@ -14,7 +14,7 @@ public class Parser {
         } else if (extension.equals("json")) {
             objectMapper = new ObjectMapper();
         } else {
-            throw new Exception("Null pointer");
+            throw new Exception("Wrong format");
         }
         return objectMapper.readValue(inputText, new TypeReference<Map<String, Object>>() {
         });
