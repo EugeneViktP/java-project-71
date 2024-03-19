@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Formatter {
-    public static String format(List<Map<String, Object>> data, String format) {
+    public static String format(List<Map<String, Object>> data, String format) throws Exception {
         switch (format) {
             case "stylish" -> {
                 return Stylish.formatter(data);
