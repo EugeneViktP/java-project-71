@@ -11,9 +11,6 @@ import java.nio.file.Paths;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public final class DifferTest {
-    private static Path expected1;
-    private static Path expected2;
-    private static Path expected3;
     private static String expectedResults1;
     private static String expectedResults2;
     private static String expectedResults3;
@@ -24,9 +21,9 @@ public final class DifferTest {
     }
     @BeforeAll
     static void definePath() throws Exception {
-        expected1 = Paths.get("src", "test", "resources", "fixtures", "resultStylish.txt");
-        expected2 = Paths.get("src", "test", "resources", "fixtures", "resultPlain.txt");
-        expected3 = Paths.get("src", "test", "resources", "fixtures", "resultJson.txt");
+        Path expected1 = getPath("resultStylish.txt");
+        Path expected2 = getPath("resultPlain.txt");
+        Path expected3 = getPath("resultJson.txt");
         expectedResults1 = Files.readString(expected1);
         expectedResults2 = Files.readString(expected2);
         expectedResults3 = Files.readString(expected3);
