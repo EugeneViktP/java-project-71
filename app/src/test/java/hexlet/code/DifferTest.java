@@ -12,8 +12,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DifferTest {
     private static String expectedResults1;
     private static String expectedResults2;
-    public static Path expected1;
-    public static Path expected2;
+    private static Path expected1;
+    private static Path expected2;
 
     private static Path getPath(String fileName) {
         return Paths.get("src", "test", "resources", "fixtures", fileName)
