@@ -2,7 +2,7 @@ package hexlet.code;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -30,10 +30,10 @@ public final class DifferTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"file1.json, file2.json", "file1.yml, file2.yml"})
-    void testDifferGenerate1(String firstFile, String secondFile) throws Exception {
-        String file1 = getPath(firstFile).toString();
-        String file2 = getPath(secondFile).toString();
+    @ValueSource(strings = {"json", "yml"})
+    void testDifferGenerate1(String fileExtension) throws Exception {
+        String file1 = getPath("file1." + fileExtension).toString();
+        String file2 = getPath("file2." + fileExtension).toString();
         String result1 = Differ.generate(file1, file2);
         assertEquals(expectedResults1, result1);
 
